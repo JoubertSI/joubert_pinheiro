@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block Conteudo %}  
+
+<form action="{% url 'filme_new' %}"method='post'>
+    {% csrf_token %} 
+    {{form.as_p}} 
+    <button type="submit">Incluir Filme</button> 
+</form>
+{% endblock %} 

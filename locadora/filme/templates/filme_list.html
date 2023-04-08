@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block Conteudo %} 
+
+<a href="{% url 'filme_new' %}">Inserir Filme </a>
+
+<div style="display: flex; flex-direction: row;">
+    {% for filme in filmes %} 
+    <p>
+        <div>
+            {{filme.filme}}
+
+        </div>
+        <div>
+            {{filme.quantidade}}
+        </div>
+        <div>
+            {{filme.preco}} 
+
+        </div>
+        
+        <a href="{%url 'filme_edit' filme.id %}">Editar Lista</a>
+        <a href="{%url 'filme_delete' filme.id %}">Excluir Filme</a>
+            {% endfor %}
+            {% endblock %} 
+    </p>
+
+
+</div>
+    
