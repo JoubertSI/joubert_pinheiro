@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block Conteudo %}  
-
+<h1>Adicione um Filme</h1>
 <form action="{% url 'filme_new' %}"method='post'>
     {% csrf_token %} 
     {{form.as_p}} 

@@ -4,9 +4,9 @@
 <a href="{% url 'filme_new' %}">Inserir Filme </a>
 
     {% for filme in filmes %} 
-    <p> {{filme.filme}}, {{filme.genero}}, {{filme.quantidade}} ,{{filme.preco}} 
-        <a href="{%url 'filme_edit' filme.id %}">Editar Lista</a>
-        <a href="{%url 'filme_delete' filme.id %}">Excluir Filme</a>
+    <p><strong> {{filme.filme}}, {{filme.genero}}, {{filme.quantidade}} ,{{filme.preco}} </strong>
+        <a href="{%url 'filme_edit' filme.id %}">Editar</a>
+        <a href="{%url 'filme_delete' filme.id %}">Excluir</a>
             {% endfor %}
             {% endblock %} 
     </p>

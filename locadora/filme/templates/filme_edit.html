@@ -1,10 +1,10 @@
 {% extends "base.html" %} 
 
 {% block Conteudo %}
-<h1>Edicao de Lista</h1>
+<h1><strong>Edicao de Lista</strong></h1>
 <form action="{% url 'filme_edit' pk %}" method="post">
     {% csrf_token %} 
     {{ form.as_p }} 
-    <button type="submit">Alterar Lista</button>
+    <button type="submit">Alterar</button>
 </form>
 {% endblock %} 
